@@ -11,9 +11,13 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
+
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 
+      body {
+        background-color: #a8b4ac;
+      }
       .title {
         color: rgb(57, 123, 90);
         font-weight: 400;
@@ -21,22 +25,15 @@
         font-family: "Figtree", sans-serif;
         font-weight: 700;
       }
-      body {
-        background-color: #a8b4ac;
-      }
-      .root-container {
-        /* background-color: aqua; */
-      }
       .whiteboard {
         padding-top: 100px;
-        width: 500px;
-        height: 100%;
-
-        position: fixed;
+        width: 490px;
+        height: 975px;
+        position: relative;
         background-color: rgb(238, 255, 249);
-
         text-align: center;
       }
+
       .whiteboard-element {
         margin: 30px;
       }
@@ -59,6 +56,19 @@
         font-size: 18px;
         font-family: Nunito;
         padding-left: 18px;
+      }
+      @media only screen and (max-width: 360px) {
+        .board {
+          font-size: 13px;
+          padding-left: 15px;
+        }
+        .whiteboard-element .img-destination {
+          width: 20px;
+          height: 20px;
+        }
+        .title {
+          font-size: 30px;
+        }
       }
       .text-board {
         padding-left: -10000px;
@@ -117,29 +127,13 @@
     ></script>
 
     <script>
-      $(document).ready(function () {   
+      $(document).ready(function () {
         var dataArray = [
           {
-            image:
-              "https://companieslogo.com/img/orig/ARTO.JK-75d7e8ca.png?t=1720244490",
-            title: "Description for Item 1",
-            destination:
-              "file:///home/doniantoro/Documents/program/personal/index.html",
+            image: "img/bibit.png",
+            title: "Nabung SBN dan Reksadana di Bibit",
+            destination: "https://linkto.bibit.id/SJpp/referralbibit",
           },
-          {
-            image:
-              "https://companieslogo.com/img/orig/ARTO.JK-75d7e8ca.png?t=1720244490",
-            title: "Description for Item 1",
-            destination:
-              "file:///home/doniantoro/Documents/program/personal/index.html",
-          },
-          {
-            image:
-              "https://companieslogo.com/img/orig/ARTO.JK-75d7e8ca.png?t=1720244490",
-            title: "Description for Item 1",
-            destination:
-              "file:///home/doniantoro/Documents/program/personal/index.html",
-          }
         ];
 
         dataArray.forEach(function (item) {
